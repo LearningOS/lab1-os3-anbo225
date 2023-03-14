@@ -9,11 +9,11 @@ pub struct TrapContext{
     pub sepc: usize,
 }
 
+// todo： trapContext是哪里初始化的设置
 impl TrapContext{
     pub fn set_sp(&mut self, sp: usize) {
         self.x[2] = sp;
     }
-
 
     // 这个函数做了什么呢？
     pub fn app_init_context(entry: usize, sp: usize) -> Self {
