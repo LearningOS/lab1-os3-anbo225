@@ -6,6 +6,7 @@ impl Log for SimpleLogger {
     fn enabled(&self, _metadata: &Metadata) -> bool {
         true
     }
+    
     fn log(&self, record: &Record) {
         if !self.enabled(record.metadata()) {
             return;
